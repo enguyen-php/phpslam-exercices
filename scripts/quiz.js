@@ -25,3 +25,52 @@ import countries from '../pays-capitales.json' with { type: 'json' };
 
 // Je recup mon tableau avec tous les pays dans la variable countries 
 console.log(countries)
+
+const question = document.querySelector(".question")
+
+window.addEventListener("DOMContentLoaded", () => {
+    quiz()
+})
+
+function quiz() {
+    let quizAnswer = countries[Math.floor(Math.random() * 194)]
+
+    let quizCountry = quizAnswer.pays
+
+    let quizCapital = quizAnswer.capitale
+
+    let quizGoodAnswer = Math.floor(Math.random() * 4)
+
+    let ans1 = countries[Math.floor(Math.random() * 194)].capitale
+    let ans2 = countries[Math.floor(Math.random() * 194)].capitale
+    let ans3 = countries[Math.floor(Math.random() * 194)].capitale
+    let ans4 = countries[Math.floor(Math.random() * 194)].capitale
+
+    if (quizGoodAnswer == 0) {
+        ans1 = quizCapital
+    } else if (quizGoodAnswer == 1) {
+        ans2 = quizCapital
+    } else if (quizGoodAnswer == 2) {
+        ans3 = quizCapital
+    } else {
+        ans4 = quizCapital
+    }
+
+    let quizDiv = document.createElement("div")
+
+    quizDiv.innerHTML = `<h1>Question :</h1>`
+
+    let choice1 = document.createElement("div")
+    let choice2 = document.createElement("div")
+    let choice3 = document.createElement("div")
+    let choice4 = document.createElement("div")
+
+    choice1.innerHTML = `<input type="radio" name="capital" />` + " " + ans1
+    choice2.innerHTML = `<input type="radio" name="capital" />` + " " + ans2
+    choice3.innerHTML = `<input type="radio" name="capital" />` + " " + ans3
+    choice4.innerHTML = `<input type="radio" name="capital" />` + " " + ans4
+
+    quizDiv.append(choice1, choice2, choice3, choice4)
+
+    question.append(quizDiv)
+}

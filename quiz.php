@@ -18,7 +18,9 @@ Lors de chaque tour on doit trouver la capitale du pays en question parmi 4 choi
 A l'issue des 20 questiobn le quiz s'arrete : "Fin du quiz, vous avez eu xx/20"
 Aussi un bouton recommencer doit apparaitre et recharger le jeu lorsque l'on clique -->
 
+<div class="question">
 
+</div>
 
 <?php
 
