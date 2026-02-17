@@ -20,8 +20,8 @@ Aussi un bouton recommencer doit apparaitre et recharger le jeu lorsque l'on cli
 
 <div class="quiz">
 
-    <h3 class="quiz-number">Question :</h3>
-    <h3 class="quiz-score">Score : </h3>
+    <h3>Question numéro <span class="quiz-number"></span></h3>
+    <h3>Score : <span class="quiz-score"></span></h3>
 
     <h2 class="quiz-question"></h2>
 
@@ -34,10 +34,11 @@ Aussi un bouton recommencer doit apparaitre et recharger le jeu lorsque l'on cli
     Puis dans un deuxieme temps le bouton affichera suivant pour 
     passer à la question suivante  -->
     <button class="quiz-submit">Valider</button>
+    <button class="quiz-next">Suivant</button>
 
 </div>
 
-<script src="./scripts/quiz.js"></script>
+<script type="module" src="./scripts/quiz.js"></script>
 
 
 
